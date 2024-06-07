@@ -18,7 +18,7 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
           onPressed: () {
             Navigator.of(context).pushNamed('profile_screen');
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
           ),
         ),
@@ -30,7 +30,7 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 44),
+                const SizedBox(height: 44),
                 const Text(
                   'Register Account',
                   style: TextStyle(
@@ -39,8 +39,8 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                     fontSize: 34,
                   ),
                 ),
-                SizedBox(height: 20),
-                Text(
+                const SizedBox(height: 20),
+                const Text(
                   textAlign: TextAlign.center,
                   'Complete your details or continue \n with social media',
                   style: TextStyle(
@@ -48,8 +48,8 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 40),
-                TextField(
+                const SizedBox(height: 40),
+                const TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(
                       Icons.email,
@@ -59,11 +59,11 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                     hintText: 'Email',
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   obscureText: isConfirmPasswordShow,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.lock,
                       color: Colors.grey,
                     ),
@@ -73,7 +73,7 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                               isConfirmPasswordShow = false;
                               setState(() {});
                             },
-                            icon: Icon(Icons.visibility),
+                            icon: const Icon(Icons.visibility),
                             color: Colors.grey,
                           )
                         : IconButton(
@@ -81,19 +81,19 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                               isConfirmPasswordShow = true;
                               setState(() {});
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.visibility_off,
                             ),
                           ),
-                    border: OutlineInputBorder(),
+                    border: const OutlineInputBorder(),
                     hintText: 'Password',
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   obscureText: isPasswordShow,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.lock,
                       color: Colors.grey,
                     ),
@@ -103,7 +103,7 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                               isPasswordShow = false;
                               setState(() {});
                             },
-                            icon: Icon(Icons.visibility),
+                            icon: const Icon(Icons.visibility),
                             color: Colors.grey,
                           )
                         : IconButton(
@@ -111,15 +111,15 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                               isPasswordShow = true;
                               setState(() {});
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.visibility_off,
                             ),
                           ),
-                    border: OutlineInputBorder(),
+                    border: const OutlineInputBorder(),
                     hintText: 'Confirm Password',
                   ),
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).pushNamed('/');
@@ -131,7 +131,7 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Continue',
                         style: TextStyle(
@@ -143,15 +143,15 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 25),
-                Text(
+                const SizedBox(height: 25),
+                const Text(
                   'Or sign up with',
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -161,14 +161,14 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                         height: 60,
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Flexible(
                       child: Image.asset(
                         'images/facebook_icon.png',
                         height: 44,
                       ),
                     ),
-                    SizedBox(width: 15),
+                    const SizedBox(width: 15),
                     Flexible(
                       child: Image.asset(
                         'images/twitter_icon.png',
@@ -177,8 +177,8 @@ class _RegisteredScreenState extends State<RegisteredScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
-                Text(
+                const SizedBox(height: 20),
+                const Text(
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,

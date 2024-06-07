@@ -28,7 +28,7 @@ class _CartScreenState extends State<CartScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'AM SHOP',
           style: TextStyle(
             fontWeight: FontWeight.w500,
@@ -37,7 +37,7 @@ class _CartScreenState extends State<CartScreen> {
         centerTitle: true,
         backgroundColor: Colors.amber,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.of(context).pop(iconData);
           },
@@ -53,7 +53,7 @@ class _CartScreenState extends State<CartScreen> {
 
   Widget _buildCarts() {
     if (widget.cartItems.isEmpty) {
-      return Center(
+      return const Center(
         child: Text(
           'No Item Available',
           style: TextStyle(
@@ -71,7 +71,7 @@ class _CartScreenState extends State<CartScreen> {
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Card(
-            margin: EdgeInsets.symmetric(vertical: 10),
+            margin: const EdgeInsets.symmetric(vertical: 10),
             color: Colors.grey.shade50,
             semanticContainer: false,
             child: Row(
@@ -106,37 +106,37 @@ class _CartScreenState extends State<CartScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 5),
-                        Text(
+                        const SizedBox(height: 5),
+                        const Text(
                           'A & M',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Text(
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           product.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Sold by A & M Codeilm...',
                           style: TextStyle(fontSize: 12, color: Colors.black54),
                         ),
-                        SizedBox(height: 7),
+                        const SizedBox(height: 7),
                         Text(
                           '\$${widget.cartItems[index].price * widget.cartItems[index].selectSizeInNumeric}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
                         ),
-                        SizedBox(height: 7),
+                        const SizedBox(height: 7),
                         Row(
                           children: [
                             InkWell(
@@ -164,14 +164,14 @@ class _CartScreenState extends State<CartScreen> {
                                                       MainAxisAlignment
                                                           .spaceBetween,
                                                   children: [
-                                                    Text('Select Size'),
+                                                    const Text('Select Size'),
                                                     GestureDetector(
                                                         onTap: () {
                                                           Navigator.of(context)
                                                               .pop();
                                                         },
-                                                        child:
-                                                            Icon(Icons.close)),
+                                                        child: const Icon(
+                                                            Icons.close)),
                                                   ],
                                                 ),
                                               ),
@@ -265,20 +265,20 @@ class _CartScreenState extends State<CartScreen> {
                                                   ],
                                                 ),
                                               ),
-                                              SizedBox(height: 5),
+                                              const SizedBox(height: 5),
                                               Padding(
                                                 padding: const EdgeInsets.only(
                                                     left: 12.0),
                                                 child: Text(
                                                   '\$${widget.cartItems[index].price * widget.cartItems[index].selectSizeInNumeric}',
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 18,
                                                   ),
                                                 ),
                                               ),
-                                              SizedBox(height: 5),
-                                              Padding(
+                                              const SizedBox(height: 5),
+                                              const Padding(
                                                 padding: const EdgeInsets.only(
                                                     left: 12.0),
                                                 child: RichTexts(
@@ -287,13 +287,13 @@ class _CartScreenState extends State<CartScreen> {
                                                       'A & M Hennes & Mauritz Retail Private Limited',
                                                 ),
                                               ),
-                                              SizedBox(height: 24),
+                                              const SizedBox(height: 24),
                                               InkWell(
                                                 onTap: () {
                                                   Navigator.of(context).pop();
                                                   setState(() {});
                                                 },
-                                                child: ContainerButton(
+                                                child: const ContainerButton(
                                                   height: 50,
                                                   buttonTitle: 'Done',
                                                 ),
@@ -311,7 +311,7 @@ class _CartScreenState extends State<CartScreen> {
                                     'Sized: ${widget.cartItems[index].selectSizeInAlphabet}',
                               ),
                             ),
-                            SizedBox(width: 8),
+                            const SizedBox(width: 8),
                             InkWell(
                               onTap: () {
                                 showModalBottomSheet(
@@ -338,13 +338,14 @@ class _CartScreenState extends State<CartScreen> {
                                                     MainAxisAlignment
                                                         .spaceBetween,
                                                 children: [
-                                                  Text('Select Size'),
+                                                  const Text('Select Size'),
                                                   GestureDetector(
                                                       onTap: () {
                                                         Navigator.of(context)
                                                             .pop();
                                                       },
-                                                      child: Icon(Icons.close)),
+                                                      child: const Icon(
+                                                          Icons.close)),
                                                 ],
                                               ),
                                             ),
@@ -432,13 +433,13 @@ class _CartScreenState extends State<CartScreen> {
                                                 ],
                                               ),
                                             ),
-                                            SizedBox(height: 26),
+                                            const SizedBox(height: 26),
                                             InkWell(
                                               onTap: () {
                                                 Navigator.of(context).pop();
                                                 setState(() {});
                                               },
-                                              child: ContainerButton(
+                                              child: const ContainerButton(
                                                   height: 50,
                                                   buttonTitle: 'Done'),
                                             ),
@@ -456,8 +457,8 @@ class _CartScreenState extends State<CartScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 7),
-                        RichTexts(
+                        const SizedBox(height: 7),
+                        const RichTexts(
                           titleOne: '7 days ',
                           titleTwo: 'return available',
                         ),
@@ -480,7 +481,7 @@ class _CartScreenState extends State<CartScreen> {
                       widget.cartItems.removeAt(index);
                       setState(() {});
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
+                        const SnackBar(
                           duration: Duration(milliseconds: 500),
                           content: Center(
                             child: Text('Remove Item !!!'),
@@ -488,7 +489,7 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                       );
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.close,
                       color: Colors.amber,
                       size: 25,
@@ -511,7 +512,7 @@ class _CartScreenState extends State<CartScreen> {
       onTap: () {
         if (total == 0) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
+            const SnackBar(
               duration: Duration(milliseconds: 500),
               content: Center(
                 child: Text('No Item Available !!!'),
@@ -520,7 +521,7 @@ class _CartScreenState extends State<CartScreen> {
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
+            const SnackBar(
               duration: Duration(milliseconds: 500),
               content: Center(
                 child: Text('Armaan Your Order is Successfully Order !!!'),

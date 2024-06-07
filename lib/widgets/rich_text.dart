@@ -16,14 +16,14 @@ class RichTexts extends StatelessWidget {
         children: [
           TextSpan(
             text: titleOne,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
           ),
           TextSpan(
             text: titleTwo,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w500,
               color: Colors.black54,
             ),

@@ -25,7 +25,7 @@ class _ProductInfoScreenState extends State<ProductInfoScreen> {
       appBar: AppBar(
         backgroundColor: Colors.amber,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Cart Details',
           style: TextStyle(
             fontWeight: FontWeight.w500,
@@ -53,7 +53,7 @@ class _ProductInfoScreenState extends State<ProductInfoScreen> {
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black12,
@@ -69,13 +69,13 @@ class _ProductInfoScreenState extends State<ProductInfoScreen> {
                     ),
                     child: Center(
                       child: Padding(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 10),
                         child: ListView(
                           children: [
                             Text(
                               widget.product.category.toUpperCase(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.amber,
@@ -84,7 +84,7 @@ class _ProductInfoScreenState extends State<ProductInfoScreen> {
                             SizedBox(height: 8),
                             Text(
                               widget.product.title,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
@@ -92,7 +92,7 @@ class _ProductInfoScreenState extends State<ProductInfoScreen> {
                             ),
                             Text(
                               '\$${widget.product.price}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w900,
                                 color: Colors.green,
@@ -104,7 +104,7 @@ class _ProductInfoScreenState extends State<ProductInfoScreen> {
                               child: Text(
                                 textAlign: TextAlign.justify,
                                 widget.product.description,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.black54,

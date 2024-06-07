@@ -12,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).pushNamed('/');
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
           ),
         ),
@@ -23,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'Complete Profile',
                 style: TextStyle(
                   color: Colors.amber,
@@ -31,8 +31,8 @@ class ProfileScreen extends StatelessWidget {
                   fontSize: 34,
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 textAlign: TextAlign.center,
                 'Complete your details or continue \n with social media',
                 style: TextStyle(
@@ -40,8 +40,8 @@ class ProfileScreen extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 40),
-              TextField(
+              const SizedBox(height: 40),
+              const TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.person,
@@ -51,8 +51,8 @@ class ProfileScreen extends StatelessWidget {
                   hintText: 'First Name',
                 ),
               ),
-              SizedBox(height: 20),
-              TextField(
+              const SizedBox(height: 20),
+              const TextField(
                 decoration: InputDecoration(
                   hintText: 'Last Name',
                   border: OutlineInputBorder(),
@@ -62,13 +62,13 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
                 keyboardType: TextInputType.phone,
                 inputFormatters: [
                   FilteringTextInputFormatter.digitsOnly,
                 ],
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Phone Number',
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(
@@ -77,8 +77,8 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              TextField(
+              const SizedBox(height: 20),
+              const TextField(
                 decoration: InputDecoration(
                   hintText: 'Address',
                   border: OutlineInputBorder(),
@@ -88,7 +88,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).pushNamed('registered_screen');
@@ -100,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                     color: Colors.amber,
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Continue',
                       style: TextStyle(
@@ -112,8 +112,8 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 textAlign: TextAlign.center,
                 'By continue, you confirm that you agree \n with our Terms and Conditions',
                 style: TextStyle(

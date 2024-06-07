@@ -13,11 +13,12 @@ class Product {
   int quantityInCart = 1;
 
   String selectSizeInAlphabet = 'M';
+
   int selectSizeInNumeric = 1;
+
   Color selectSized = Colors.amber;
 
   String isAddedCard = 'Add to Cart';
-
 
   Product({
     required this.id,

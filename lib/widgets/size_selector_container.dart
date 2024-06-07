@@ -23,7 +23,7 @@ class SizedSelectContainer extends StatelessWidget {
               sizeTitle,
             ),
           ),
-          Icon(
+          const Icon(
             Icons.arrow_drop_down,
           ),
         ],

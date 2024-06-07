@@ -19,8 +19,8 @@ class _LogInScreenState extends State<LogInScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 120),
-              Text(
+              const SizedBox(height: 120),
+              const Text(
                 'Welcome Back',
                 style: TextStyle(
                   color: Colors.amber,
@@ -28,8 +28,8 @@ class _LogInScreenState extends State<LogInScreen> {
                   fontSize: 34,
                 ),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 textAlign: TextAlign.center,
                 'Sign in with your email and password or \n continue with social media',
                 style: TextStyle(
@@ -37,8 +37,8 @@ class _LogInScreenState extends State<LogInScreen> {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 40),
-              TextField(
+              const SizedBox(height: 40),
+              const TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.email,
@@ -48,11 +48,11 @@ class _LogInScreenState extends State<LogInScreen> {
                   hintText: 'Email',
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextField(
                 obscureText: isPasswordShow == true ? isPasswordShow : false,
                 decoration: InputDecoration(
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.lock,
                     color: Colors.grey,
                   ),
@@ -62,7 +62,7 @@ class _LogInScreenState extends State<LogInScreen> {
                             isPasswordShow = false;
                             setState(() {});
                           },
-                          icon: Icon(Icons.visibility),
+                          icon: const Icon(Icons.visibility),
                           color: Colors.grey,
                         )
                       : IconButton(
@@ -70,15 +70,15 @@ class _LogInScreenState extends State<LogInScreen> {
                             isPasswordShow = true;
                             setState(() {});
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.visibility_off,
                           ),
                         ),
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   hintText: 'Password',
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -92,14 +92,14 @@ class _LogInScreenState extends State<LogInScreen> {
                           setState(() {});
                         },
                       ),
-                      Text('Remember me'),
+                      const Text('Remember me'),
                     ],
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).pushNamed('forget_password_screen');
                     },
-                    child: Text(
+                    child: const Text(
                       'Forget Password',
                       style: TextStyle(
                         color: Colors.amber,
@@ -108,7 +108,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).pushNamed('home_screen');
@@ -120,7 +120,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     color: Colors.amber,
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Continue',
                       style: TextStyle(
@@ -132,7 +132,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -142,14 +142,14 @@ class _LogInScreenState extends State<LogInScreen> {
                       height: 60,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Flexible(
                     child: Image.asset(
                       'images/facebook_icon.png',
                       height: 44,
                     ),
                   ),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                   Flexible(
                     child: Image.asset(
                       'images/twitter_icon.png',
@@ -161,13 +161,13 @@ class _LogInScreenState extends State<LogInScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account"),
-                  SizedBox(width: 10),
+                  const Text("Don't have an account"),
+                  const SizedBox(width: 10),
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).pushNamed('profile_screen');
                     },
-                    child: Text(
+                    child: const Text(
                       'Sign Up',
                       style: TextStyle(
                         color: Colors.amber,

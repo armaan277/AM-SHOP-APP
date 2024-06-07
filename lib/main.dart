@@ -3,6 +3,6 @@ import 'package:testing/app.dart';
 
 void main() {
   runApp(
-    AMShopApp(),
+    const AMShopApp(),
   );
 }

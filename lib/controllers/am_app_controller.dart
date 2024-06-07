@@ -6,24 +6,24 @@ import 'package:http/http.dart';
 import 'package:testing/model/product.dart';
 
 class APICalls {
+  // This function return Only One response in API.
   static Future<Product> getClothDetail() async {
     Response response =
         await get(Uri.parse('https://fakestoreapi.com/products/1'));
 
     final mapResponse = jsonDecode(response.body);
-    // debugPrint('mapResponse : $mapResponse');
 
     debugPrint('rating ${mapResponse['rating']['rate']}');
     return Product.fromMap(mapResponse);
   }
 
+  // This function return All Response in API.
   static Future<Either<String, List<Product>>> getAllClothDetail() async {
     try {
       Response response =
           await get(Uri.parse('https://fakestoreapi.com/products'));
 
       final mapProductListResponse = jsonDecode(response.body);
-      // debugPrint('mapResponse : $mapProductListResponse');
 
       List<Product> productList = [];
 

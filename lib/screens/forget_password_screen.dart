@@ -19,7 +19,7 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
           onPressed: () {
             Navigator.of(context).pushNamed('/');
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
           ),
         ),
@@ -29,7 +29,7 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Forget Password',
               style: TextStyle(
                 color: Colors.amber,
@@ -37,8 +37,8 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
                 fontSize: 34,
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               textAlign: TextAlign.center,
               'Please enter your email and we will send \n you a link to return to your account',
               style: TextStyle(
@@ -46,8 +46,8 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
                 fontSize: 16,
               ),
             ),
-            SizedBox(height: 40),
-            TextField(
+            const SizedBox(height: 40),
+            const TextField(
               decoration: InputDecoration(
                 prefixIcon: Icon(
                   Icons.email,
@@ -57,11 +57,11 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
                 hintText: 'Email',
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               obscureText: isPasswordShow == true ? isPasswordShow : false,
               decoration: InputDecoration(
-                prefixIcon: Icon(
+                prefixIcon: const Icon(
                   Icons.lock,
                   color: Colors.grey,
                 ),
@@ -71,7 +71,7 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
                           isPasswordShow = false;
                           setState(() {});
                         },
-                        icon: Icon(Icons.visibility),
+                        icon: const Icon(Icons.visibility),
                         color: Colors.grey,
                       )
                     : IconButton(
@@ -79,15 +79,15 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
                           isPasswordShow = true;
                           setState(() {});
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.visibility_off,
                         ),
                       ),
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
                 hintText: 'New Password',
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).pushNamed('login_screen');
@@ -99,7 +99,7 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
                   color: Colors.amber,
                   borderRadius: BorderRadius.circular(5),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Continue',
                     style: TextStyle(
@@ -111,22 +111,22 @@ class _ForgetPasswordScreen extends State<ForgetPasswordScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don't have an account",
                   style: TextStyle(
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pushNamed('registered_screen');
                   },
-                  child: Text(
+                  child: const Text(
                     'Sign Up',
                     style: TextStyle(
                       color: Colors.amber,

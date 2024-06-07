@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:testing/app_drawer.dart';
 import 'package:testing/controllers/am_app_controller.dart';
 import 'package:testing/model/product.dart';
@@ -54,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'AM SHOP!',
           style: TextStyle(
             fontWeight: FontWeight.w500,
@@ -65,9 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             onPressed: () {
-              // Navigator.of(context).pushNamed('cart_screen').then((_) {
-              //   setState(() {});
-              // }); Router Code
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
@@ -88,12 +84,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Text('${totalCartProducts.value}');
                 },
               ),
-              child: Icon(Icons.shopping_cart),
+              child: const Icon(Icons.shopping_cart),
             ),
           ),
         ],
       ),
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
         child: Column(
@@ -155,31 +151,31 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextField(
               controller: searchController,
               decoration: InputDecoration(
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: const OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.amber),
                 ),
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 suffixIcon: searchController.text.isEmpty
                     ? null
                     : IconButton(
-                        icon: Icon(Icons.close),
+                        icon: const Icon(Icons.close),
                         onPressed: () {
                           searchController.clear();
                           setState(() {});
                         },
                       ),
                 contentPadding:
-                    EdgeInsets.symmetric(horizontal: 0, vertical: 5.0),
-                border: OutlineInputBorder(),
+                    const EdgeInsets.symmetric(horizontal: 0, vertical: 5.0),
+                border: const OutlineInputBorder(),
                 hintText: 'Search',
               ),
               onChanged: (_) => setState(() {}),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Expanded(child: _buildProductListView()),
           ],
         ),
@@ -201,7 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if (select == '') {
       return isAllDataisLoading
-          ? SizedBox(
+          ? const SizedBox(
               height: 550,
               child: Center(
                 child: CircularProgressIndicator(
@@ -225,8 +221,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Center(
       child: Text(
         textAlign: TextAlign.center,
-        'Server down!!! ${errorAPI}',
-        style: TextStyle(
+        'Server down!!! $errorAPI',
+        style: const TextStyle(
           color: Colors.red,
           fontSize: 18,
         ),
@@ -236,10 +232,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget showProductDetails({required List<Product> filteredProducts}) {
     if (filteredProducts.isEmpty) {
-      return SizedBox(
+      return const SizedBox(
         height: 500,
         child: Center(
-          child: const Text(
+          child: Text(
             'Product Not Found!!!',
             style: TextStyle(
               fontSize: 22,
@@ -271,7 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
             });
           },
           child: Card(
-            margin: EdgeInsets.symmetric(vertical: 10),
+            margin: const EdgeInsets.symmetric(vertical: 10),
             color: Colors.white,
             semanticContainer: false,
             child: Row(
@@ -299,25 +295,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           product.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Text(
                           '\$${product.price}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Text(
                           '⭐ ${product.rating} / ${product.count}',
-                          style: TextStyle(fontSize: 16),
+                          style: const TextStyle(fontSize: 16),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Row(
                           children: [
                             Expanded(
@@ -327,11 +323,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 onPressed: () async {
                                   if (productsCart.contains(product)) {
-                                    // Navigator.of(context) Router Code
-                                    //     .pushNamed('cart_screen')
-                                    //     .then((_) {
-                                    //   setState(() {});
-                                    // });
                                     await Navigator.of(context).push(
                                       MaterialPageRoute(
                                         builder: (context) {
@@ -359,7 +350,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 },
                                 child: Text(
                                   product.isAddedCard,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 16,
                                     color: Colors.white,
                                   ),
